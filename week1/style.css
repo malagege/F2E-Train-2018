@@ -1,0 +1,403 @@
+* {
+  /* border: 1px solid black; */
+}
+
+body {
+  background: #e1e1e1;
+  font-family: Roboto, '微軟正黑體';
+}
+.container {
+  width: 620px;
+  margin: 0px auto;
+}
+
+nav {
+  background: #4a90e2;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  height: 76px;
+}
+nav ul li {
+  min-width: 220px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #ffffff;
+}
+
+nav ul li.active {
+  border-bottom: 5px solid #00408b;
+}
+
+nav ul li:not(.active) {
+  cursor: pointer;
+}
+
+.ft-title {
+  font-family: Roboto, '微軟正黑體';
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  align-items: center;
+}
+
+.ft-subtitle {
+  font-family: Roboto, '微軟正黑體';
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+}
+
+.ft-paragraph {
+  font-family: Roboto, '微軟正黑體';
+  font-size: 16px;
+  color: #000000;
+}
+
+.ft-remark {
+  font-family: Roboto, '微軟正黑體';
+  font-size: 16px;
+  color: #757575;
+  line-height: 24px;
+}
+
+.ft-placeholder {
+  font-family: Roboto, '微軟正黑體';
+  font-size: 16px;
+  color: #757575;
+  line-height: 24px;
+}
+
+.ft-status {
+  font-family: Roboto, '微軟正黑體';
+  font-style: italic;
+  font-size: 24px;
+  color: #c8c8c8;
+  padding: 10px 32px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.input-task {
+  flex: 1;
+  padding: 18px 0px;
+}
+
+.box-mask {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 2px;
+}
+
+.chbox-wrap,
+.box-mask {
+  display: inline-block;
+}
+
+.chbox-wrap {
+  padding-left: 32px;
+  padding-right: 6px;
+}
+.add-task-header {
+  padding: 20px 10px;
+  justify-content: space-between;
+}
+
+.add-task.active .add-task-header {
+  border-bottom: 2px solid #c8c8c8;
+}
+
+.add-task-header input:first-child {
+  display: none;
+}
+
+.add-task-header input {
+  border-radius: 5px;
+  margin: 0px 10px;
+  padding-left: 60px;
+  border: 1px solid black;
+}
+
+.add-task.active .add-task-header input {
+  padding-left: 16px;
+}
+
+.add-task .add-task-header {
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.add-task .add-task-header input {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.add-task-header input:focus {
+  border: none;
+  padding-left: 0px;
+}
+
+.add-task.active .add-task-header input {
+  background: transparent;
+  border: none;
+}
+
+.add-task-header input:checked + .box-mask {
+  background: #4a90e2;
+}
+
+.add-task-header input:checked + .box-mask::before {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #ffffff;
+  font-size: inherit;
+  text-rendering: auto;
+  content: '\f00c';
+}
+
+.add-task-header .fa {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  margin: 0px 10px;
+}
+
+.task-content label {
+  display: block;
+  padding: 8px 0px;
+}
+
+.task-content {
+  padding: 26px 96px 84px 96px;
+  position: relative;
+}
+
+.add-task {
+  border-radius: 5px;
+  margin-top: 22px;
+  overflow: hidden;
+}
+
+.add-task.active {
+  background: #f2f2f2;
+  box-shadow: 0 4px 4px 0 #c8c8c8;
+}
+
+.add-task .task-content,
+.add-task .chbox-wrap,
+.add-task .fa-star-o,
+.add-task .fa-pencil {
+  display: none;
+}
+
+.add-task.active .task-content,
+.add-task.active .chbox-wrap,
+.add-task.active .fa-star-o,
+.add-task.active .fa-pencil {
+  display: block;
+}
+
+.task-content .cancel-btn {
+  cursor: pointer;
+  bottom: 0px;
+  height: 60px;
+  width: 50%;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  color: #d0021b;
+}
+
+.task-content textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.task-content .add-task-btn {
+  cursor: pointer;
+  bottom: 0px;
+  height: 60px;
+  width: 50%;
+  right: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4a90e2;
+  color: #ffffff;
+}
+
+.tasks {
+  padding-top: 0px;
+}
+
+.task {
+  background: #f2f2f2;
+  min-height: 102px;
+  border-radius: 5px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.task.active {
+  box-shadow: 0 4px 4px 0 #c8c8c8;
+}
+
+.task.task-star {
+  background: #fff2dc;
+  cursor: pointer;
+}
+
+.task.task-star .fa-star-o::before {
+  content: '\f005';
+  color: #f5a623;
+}
+
+.add-task-header.checked input {
+  text-decoration: line-through;
+}
+
+.task .add-task-header input {
+  padding-left: 0px;
+  border: none;
+  background: transparent;
+}
+
+.task .task-sub {
+  padding-left: 72px;
+}
+.task .task-sub .fa {
+  padding: 15px 8px;
+}
+
+.task .task-sub .fa::before {
+  padding-right: 8px;
+}
+
+.add-task .plus {
+  width: 0px;
+}
+
+.add-task.active .add-task-header .plus {
+  display: none;
+}
+
+.add-task .task-content .plus {
+  width: initial;
+  padding-right: 10px;
+}
+
+.add-task .task-content .plus::before,
+.add-task .task-content .plus::after {
+  border: 1px solid #ffffff;
+}
+
+.add-task.active .add-task-content .plus {
+  display: none;
+}
+
+.plus::before,
+.plus::after {
+  content: '';
+  width: 20px;
+  display: block;
+  border: 1px solid #c8c8c8;
+}
+
+.plus::after {
+  transform: rotate(90deg);
+}
+
+.add-task-header .plus::before,
+.add-task-header .plus::after {
+  content: '';
+  position: relative;
+  width: 20px;
+  display: block;
+  left: 30px;
+  border: 1px solid #c8c8c8;
+}
+
+.add-task-header .plus::after {
+  top: -2px;
+  transform: rotate(90deg);
+}
+
+.cancel-icon {
+  position: relative;
+  width: 20px;
+  padding-right: 20px;
+  /* overflow: auto; */
+}
+
+.cancel-icon::before,
+.cancel-icon::after {
+  position: absolute;
+  content: '';
+  width: 18px;
+  display: block;
+  border: 1px solid #d0021b;
+  margin-right: 14px;
+  transform: rotate(135deg);
+}
+
+.cancel-icon::after {
+  width: 18px;
+  transform: rotate(45deg);
+}
+
+.task .task-content {
+  border-top: 1px solid #c8c8c8;
+  display: none;
+}
+
+.task.active .task-content {
+  display: block;
+  background: #f2f2f2;
+}
+
+.task.active .task-sub {
+  display: none;
+}
+
+.fa-pencil {
+  cursor: pointer;
+}
+
+.task-content label::before {
+  position: relative;
+  display: inline-block;
+  left: -24px;
+  font: normal normal normal 17px/1 FontAwesome;
+  width: 0px;
+}
+
+.task-content label:nth-of-type(1)::before {
+  content: '\f073';
+}
+
+.task-content label:nth-of-type(2)::before {
+  content: '\f016';
+}
+
+.task-content label:nth-of-type(3)::before {
+  content: '\f27b';
+}

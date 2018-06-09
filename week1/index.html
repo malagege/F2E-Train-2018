@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week1 todolist</title>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script src="./common.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' />
+    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' />
+</head>
+
+<body>
+    <nav>
+        <ul class="container ft-title">
+            <li class="active">My Tasks</li>
+            <li>In Progress</li>
+            <li>Completed</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="add-task">
+            <div class="add-task-header flex-row">
+                <div class="chbox-wrap">
+                    <label>
+                        <input type="checkbox">
+                        <div class="box-mask"></div>
+                    </label>
+                </div>
+                <span class="plus"></span>
+                <input type="text" class="ft-title input-task" placeholder="Add Task">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+            <div class="task-content">
+                <label class="ft-subtitle">Deadline</label>
+                <input class="ft-paragraph" type="date">
+                <input class="ft-paragraph" type="time">
+                <label class="ft-subtitle">File</label>
+                <input type="file" name="" id="">
+                <label class="ft-subtitle">Comment</label>
+                <textarea class="ft-paragraph" name="" id="" cols="30" rows="10"></textarea>
+                <div class="cancel-btn ft-title">
+                    <span class="cancel-icon"></span>
+                    Cancel
+                </div>
+                <div class="add-task-btn ft-title">
+                    <span class="plus"></span>
+                    Add Task
+                </div>
+            </div>
+        </div>
+        <div class="tasks">
+            <div class="task">
+                <div class="add-task-header flex-row">
+                    <div class="chbox-wrap">
+                        <label>
+                            <input type="checkbox">
+                            <div class="box-mask"></div>
+                        </label>
+                    </div>
+                    <input type="text" class="ft-title input-task" placeholder="Add Task" value="Type a Something">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="task-sub ft-paragraph">
+                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                    <i class="fa fa-calendar" aria-hidden="true">2017/01/01</i>
+                    <i class="fa fa-commenting-o "></i>
+                </div>
+                <div class="task-content">
+                    <label class="ft-subtitle">Deadline</label>
+                    <input class="ft-paragraph" type="date">
+                    <input class="ft-paragraph" type="time">
+                    <label class="ft-subtitle">File</label>
+                    <input type="file" name="" id="">
+                    <label class="ft-subtitle">Comment</label>
+                    <textarea class="ft-paragraph" name="" id="" cols="30" rows="10"></textarea>
+                    <div class="cancel-btn ft-title">
+                        <span class="cancel-icon"></span>
+                        Cancel
+                    </div>
+                    <div class="add-task-btn ft-title">
+                        <span class="plus"></span>
+                        Add Task
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <div class="add-task-header task-star flex-row">
+                    <div class="chbox-wrap">
+                        <label>
+                            <input type="checkbox">
+                            <div class="box-mask"></div>
+                        </label>
+                    </div>
+                    <input type="text" class="ft-title input-task" placeholder="Add Task" value="Type a Something">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="task-sub ft-paragraph">
+                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                    <i class="fa fa-calendar" aria-hidden="true">2017/01/01</i>
+                    <i class="fa fa-commenting-o "></i>
+                </div>
+                <div class="task-content">
+                    <label class="ft-subtitle">Deadline</label>
+                    <input class="ft-paragraph" type="date">
+                    <input class="ft-paragraph" type="time">
+                    <label class="ft-subtitle">File</label>
+                    <input type="file" name="" id="">
+                    <label class="ft-subtitle">Comment</label>
+                    <textarea class="ft-paragraph" name="" id="" cols="30" rows="10"></textarea>
+                    <div class="cancel-btn ft-title">
+                        <span class="cancel-icon"></span>
+                        Cancel
+                    </div>
+                    <div class="add-task-btn ft-title">
+                        <span class="plus"></span>
+                        Add Task
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <div class="add-task-header flex-row">
+                    <div class="chbox-wrap">
+                        <label>
+                            <input type="checkbox">
+                            <div class="box-mask"></div>
+                        </label>
+                    </div>
+                    <input type="text" class="ft-title input-task" placeholder="Add Task" value="Type a Something">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="task-sub ft-paragraph">
+                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                    <i class="fa fa-calendar" aria-hidden="true">2017/01/01</i>
+                    <i class="fa fa-commenting-o "></i>
+                </div>
+                <div class="task-content">
+                    <label class="ft-subtitle">Deadline</label>
+                    <input class="ft-paragraph" type="date">
+                    <input class="ft-paragraph" type="time">
+                    <label class="ft-subtitle">File</label>
+                    <input type="file" name="" id="">
+                    <label class="ft-subtitle">Comment</label>
+                    <textarea class="ft-paragraph" name="" id="" cols="30" rows="10"></textarea>
+                    <div class="cancel-btn ft-title">
+                        <span class="cancel-icon"></span>
+                        Cancel
+                    </div>
+                    <div class="add-task-btn ft-title">
+                        <span class="plus"></span>
+                        Add Task
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ft-status">4 tasks left</div>
+    </div>
+</body>
+
+</html>
