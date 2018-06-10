@@ -255,18 +255,35 @@ nav ul li:not(.active) {
   border-radius: 5px;
   margin-top: 8px;
   overflow: hidden;
+  position: relative;
+}
+
+.task .sortable {
+  display: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.task:hover .sortable {
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  cursor: n-resize;
 }
 
 .task.active {
   box-shadow: 0 4px 4px 0 #c8c8c8;
 }
 
-.task.task-star {
+.task.task-star,
+.add-task.task-star {
   background: #fff2dc;
   cursor: pointer;
 }
 
-.task.task-star .fa-star-o::before {
+.task.task-star .fa-star-o::before,
+.add-task.task-star .fa-star-o::before {
   content: '\f005';
   color: #f5a623;
 }
@@ -333,7 +350,7 @@ nav ul li:not(.active) {
   width: 20px;
   display: block;
   left: 30px;
-  border: 1px solid #c8c8c8;
+  border: 1px solid #ffffff;
 }
 
 .add-task-header .plus::after {
@@ -369,7 +386,8 @@ nav ul li:not(.active) {
   display: none;
 }
 
-.task.active .task-content {
+.task.active .task-content,
+.add-task.active .task-content {
   display: block;
   background: #f2f2f2;
 }
@@ -400,4 +418,8 @@ nav ul li:not(.active) {
 
 .task-content label:nth-of-type(3)::before {
   content: '\f27b';
+}
+
+.hide.hide.hide.hide {
+  display: none;
 }
