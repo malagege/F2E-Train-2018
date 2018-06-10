@@ -317,13 +317,16 @@ nav ul li:not(.active) {
   display: none;
 }
 
-.add-task .task-content .plus {
+.add-task .task-content .plus,
+.task .task-content .plus {
   width: initial;
   padding-right: 10px;
 }
 
 .add-task .task-content .plus::before,
-.add-task .task-content .plus::after {
+.add-task .task-content .plus::after,
+.task .task-content .plus::before,
+.task .task-content .plus::after {
   border: 1px solid #ffffff;
 }
 
@@ -350,7 +353,7 @@ nav ul li:not(.active) {
   width: 20px;
   display: block;
   left: 30px;
-  border: 1px solid #ffffff;
+  border: 1px solid #c8c8c8;
 }
 
 .add-task-header .plus::after {
