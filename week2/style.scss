@@ -1,0 +1,106 @@
+* {
+  // border: 1px solid #000;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: Roboto, '微軟正黑體';
+}
+
+.my-nav .title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+}
+
+header {
+  background: #7828b4;
+}
+
+.fit-image {
+  object-fit: cover;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.my-nav {
+  background: #ebebeb;
+}
+
+header .input_border {
+  border: none;
+  border-bottom: solid #ffffff 1px;
+  color: #ffffff;
+  font-style: italic;
+  padding-left: 25px;
+}
+
+.col-search {
+  right: -22px;
+  color: #ffffff;
+}
+
+.result-text {
+  font-family: Roboto;
+  font-size: 24px;
+  color: #000000;
+}
+
+.result-text span {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  color: #9013fe;
+  line-height: 36px;
+}
+
+.result-tags {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: italic;
+  color: #9013fe;
+}
+
+.my-card {
+  background: #ffffff;
+}
+
+.my-card .title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  color: #9013fe;
+  line-height: 36px;
+}
+
+.b-3 {
+  border: 0.1rem solid #9013fe !important;
+  color: #9013fe;
+  font-style: italic;
+}
+
+.b-3.checked {
+  background: #9013fe;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 414px) {
+  .menu-item {
+    min-height: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 1200px) {
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 2 </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="px-5 px-md-0 px-lg-5">
+            <div class="row">
+                <div class="col-md-4 text-center py-3">
+                    <img src="https://hexschool.github.io/THE_F2E_Design/week2-filter/assets/logo.svg" alt="Have Fun">
+                </div>
+                <div class="col-md-8 d-flex px-0 align-items-center">
+                    <div class="col-1 d-flex  px-0 justify-content-end align-items-center col-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-11 px-0">
+                        <div class="col-12  col-lg-8 px-0 py-2 py-md-0">
+                            <input class="w-100 bg-transparent input_border" type="text" placeholder="Explore your own activities">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row justify-content-center container-fluid m-auto">
+        <div class="col-md-4 px-1 px-md-0  px-lg-5">
+            <div class="col-12 my-nav">
+                <div class="title col-12 py-2">
+                    Location
+                </div>
+                <div class="col-12 py-2">
+                    <select class="custom-select">
+                        <option value="1">Taiwan</option>
+                        <option value="2">China</option>
+                        <option value="3">Japanese</option>
+                    </select>
+                </div>
+                <div class="title col-md-12 py-2">
+                    Date
+                </div>
+                <div class="col-md-12">
+                    <label class="w-100 px-2">from</label>
+                    <input class="w-100 form-control" type="text">
+                    <label class="w-100 px-2">to</label>
+                    <input class="w-100 form-control" type="text">
+                </div>
+                <div class="title col-md-12 py-2">
+                    Categories
+                </div>
+                <div class="col-md-12">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">All</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">Entertainment</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">Food</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">Learning</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label" for="customCheck5">Outdoors</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 justify-content-center px-0   px-md-3">
+            <div class="result-text col-12 pt-4 px-0">
+                showing
+                <span>15</span>
+                results by ...
+            </div>
+            <div class="result-tags col-12 px-0">
+                <span class="border b-3 px-1 mx-1 rounded">Taipei
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </span>
+                <span class="border b-3 px-1 mx-1 rounded">Keelung
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="col-12 d-md-flex flex-md-wrap  my-4 px-0">
+                <div class="col-12 col-lg-4 px-0 d-md-block">
+                    <img class="w-100 h-100 fit-image" src="https://picsum.photos/720/480/?random1">
+                </div>
+                <div class="my-card col-12 col-lg-8 py-1">
+                    <div class="title px-2 py-2">高雄願景館</div>
+                    <div class="my-card-content p-2">
+                        高雄願景館的前身是日治時期興建的高雄市舊火車站，外觀是”和洋混合式建築”氣勢雄偉，內部則為西式的玄關及大廳。
+                    </div>
+                    <div class="card-tag p-2">
+                        <span class="border b-3 px-3  rounded">Taiwan</span>
+                    </div>
+                    <div class="card-meta p-2">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Keelung
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        2018/05/24-2018/05/31</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-md-flex flex-md-wrap  my-4 px-0">
+                <div class="col-12 col-lg-4 px-0 d-md-block">
+                    <img class="w-100 h-100 fit-image" src="https://picsum.photos/720/480/?random">
+                </div>
+                <div class="my-card col-12 col-lg-8 py-1">
+                    <div class="title px-2 py-2">中都愛河濕地公園</div>
+                    <div class="my-card-content p-2">
+                        串起高雄城市生態綠廊的中都愛河濕地公園座落於愛河南側的十全與九如路之間，全長約2.5公里，佔地達七千餘平方公尺。
+                    </div>
+                    <div class="card-tag p-2">
+                        <span class="border b-3 px-3  rounded">Taiwan</span>
+                        <span class="border b-3 px-3  rounded checked">Keelung</span>
+                    </div>
+                    <div class="card-meta p-2">
+                        <span></span>
+                        <span>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Keelung
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            2018/05/24-2018/05/31</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-md-flex flex-md-wrap  my-4 px-0">
+                <div class="col-12 col-lg-4 px-0 d-md-block">
+                    <img class="w-100 h-100 fit-image" src="https://picsum.photos/720/480/?random2">
+                </div>
+                <div class="my-card col-12 col-lg-8 py-1">
+                    <div class="title px-2 py-2">檨仔林埤濕地公園</div>
+                    <div class="my-card-content p-2">
+                        狹長型的檨仔林埤濕地公園位於高雄市三民區，鼎金後路與鼎金系統交流道之間，是高雄市近年來整治成功，兼具滯洪、防洪、休閒教育與生態功能的埤塘濕地公園之一。
+                    </div>
+                    <div class="card-tag p-2">
+                        <span class="border b-3 px-3  rounded checked">Keelung</span>
+                    </div>
+                    <div class="card-meta p-2">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Keelung
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        2018/05/24-2018/05/31</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
