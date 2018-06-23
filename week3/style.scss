@@ -1,0 +1,95 @@
+* {
+  //   border: 1px solid black;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #9b9b9b;
+  position: relative;
+}
+
+.navbar {
+  background: #000000 !important;
+  font-family: HelveticaNeue;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  color: #ffffff !important;
+  a {
+    color: #ffffff !important;
+    position: relative;
+  }
+  li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    border: 3px solid white;
+  }
+}
+
+.dropdown-check1 {
+  input[type='checkbox']:checked ~ .fa.fa-square {
+    display: none;
+  }
+  input:not(:checked) ~ .fa.fa-check-square {
+    display: none;
+  }
+}
+
+.web-card {
+  img {
+    width: 100%;
+    max-width: 45px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #000000;
+}
+
+#home,
+#orders,
+#product {
+  display: none;
+  &:target {
+    display: block;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+
+#home {
+  h5 {
+    display: inline-block;
+  }
+  .green {
+    font-family: Helvetica;
+    font-size: 36px;
+    color: #7ed321;
+    font-weight: 500;
+  }
+  .red {
+    font-family: Helvetica;
+    font-size: 36px;
+    color: #d0021b;
+    font-weight: bold;
+  }
+  .blue {
+    font-family: HelveticaNeue;
+    font-size: 36px;
+    color: #4a90e2;
+    font-weight: bold;
+  }
+}
