@@ -16,7 +16,8 @@ header {
 }
 
 .fit-image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bg-transparent {

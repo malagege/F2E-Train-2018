@@ -63,6 +63,7 @@ h5 {
 }
 
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   z-index: 99;
