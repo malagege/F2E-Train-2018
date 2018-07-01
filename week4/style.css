@@ -51,9 +51,13 @@ h3 {
 
 .brink_t {
   background: repeating-linear-gradient(140deg, #50e3c2 0%, #50e3c2 10%, transparent 10%, transparent 20%);
-  background-size: 100% 100%;
   height: 100px;
   width: 220px;
+}
+
+a {
+  width: 100%;
+  height: 100%;
 }
 
 .item1 img,
@@ -171,6 +175,13 @@ h3 {
   right: -60px;
   top: -50px;
   background: #50e3c2;
+}
+
+.item2 .num {
+  left: auto;
+  top: auto;
+  right: -120px;
+  top: -110px;
 }
 
 .item3 {
