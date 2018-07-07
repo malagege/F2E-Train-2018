@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900,900i');
+
+$bg-color: #000000;
+$green-color: #50ff44;
+
+body {
+  margin: 0px;
+  font-family: Roboto, '微軟正黑體';
+  font-size: 16px;
+  color: $bg-color;
+  line-height: 24px;
+}
+
+.header {
+  background: $bg-color;
+  color: $green-color;
+  font-style: italic;
+  // height: 74px;
+  font-size: 36px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.container {
+  width: 610px;
+  margin: 28px auto;
+}
+
+.detail {
+  .name {
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 36px;
+    font-weight: bold;
+    background: $bg-color;
+    padding: 8px 0px;
+    text-align: center;
+  }
+  img {
+    margin-top: -8px;
+    float: left;
+    width: 292px;
+    border: 5px solid $bg-color;
+  }
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+  .line {
+    .attr {
+      font-weight: bold;
+      padding-left: 24px;
+      padding-right: 24px;
+      float: left;
+      width: 50px;
+    }
+    padding-top: 16px;
+  }
+  .line ~ .line {
+    padding-top: 8px;
+  }
+  .summary {
+    .attr {
+      font-weight: bold;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 16px; //display:inline 沒有padding-top
+      display: inline-block;
+    }
+    .summary-text {
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.chapters {
+  font-weight: bold;
+  &::before {
+    border: 4px solid $bg-color;
+    content: 'All Chapters';
+    display: block;
+    padding: 15px 24px;
+    background: $bg-color;
+    color: #ffffff;
+    width: 181px;
+    font-size: 28px;
+    text-align: center;
+  }
+  .chapter {
+    line-height: 24px;
+    color: $bg-color;
+    padding: 15px 24px;
+    border: 4px solid $bg-color;
+    &:hover {
+      background: $bg-color;
+      color: #ffffff;
+      &.new::after {
+        color: black;
+      }
+    }
+    & ~ .chapter {
+      border-top: none;
+      border-bottom: none;
+    }
+    &.new::after {
+      content: 'NEW';
+      display: inline-block;
+      padding: 0px 12px;
+      background: $green-color;
+    }
+  }
+  div:first-child {
+    border-bottom: none;
+  }
+  div:last-child:last-child {
+    border-bottom: 4px solid $bg-color;
+  }
+}
+
+.control {
+  display: flex;
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .light-switch {
+    width: 100px;
+    margin-left: auto;
+    display: flex;
+    .control-button {
+      flex: 1;
+      position: relative;
+      border: 2px solid $bg-color;
+      margin: 0px 10px;
+      &::before {
+        box-sizing: border-box;
+        content: '';
+        border: 1px solid $bg-color;
+        background: $bg-color;
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        top: 10%;
+        left: 0px;
+      }
+    }
+  }
+  .fa-angle-right {
+    padding: 0px 20px;
+    line-height: inherit;
+  }
+  .fas {
+    line-height: inherit;
+  }
+}
+
+.dark {
+  background: $bg-color;
+  color: #ffffff !important;
+  div ~ {
+    color: #ffffff;
+  }
+  .header {
+    background: $green-color;
+    color: $bg-color;
+  }
+  .light-switch .control-button {
+    &::before {
+      left: 50%;
+    }
+  }
+  .control-button {
+    border-color: #ffffff !important;
+    background: #ffffff;
+  }
+}
+
+.page {
+  padding-top: 20px;
+  position: relative;
+  align-items: center;
+  .left {
+    position: absolute;
+    width: 60%;
+    left: calc(
+      -610px * 60 / 100 * 10 / 100
+    ); //踩雷注意!!!! left 跟right 百分比是對應 relative，不是上一層....
+    height: calc(100% - 20px);
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    &:hover::before {
+      content: '<';
+      display: flex;
+      align-items: center;
+      color: $bg-color;
+      width: 10%;
+      height: 100%;
+      background: $green-color;
+      position: absolute;
+    }
+  }
+  .right {
+    &::before {
+      content: '';
+      display: block;
+      margin-right: auto;
+    }
+    &:hover::after {
+      content: '>';
+      display: flex;
+      align-items: center;
+      color: $bg-color;
+      width: 10%;
+      height: 100%;
+      background: $green-color;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+    position: absolute;
+    width: 60%;
+    right: calc(-610px * 60 / 100 * 10 / 100);
+    font-size: 60px;
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.page-switch {
+  display: flex;
+  overflow-y: auto;
+  counter-reset: page;
+  padding-top: 20px;
+  .img {
+    padding: 10px;
+    width: 80px;
+    height: 120px;
+    flex-shrink: 0;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      counter-increment: page;
+      content: counter(page);
+    }
+
+    &:hover {
+      &::before {
+        content: '';
+        display: block;
+        background: none;
+      }
+      background: black;
+    }
+    &:target {
+      &::before {
+        background: none;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+* {
+  // border: 1px solid black;
+  transition: all 0.3s;
+}

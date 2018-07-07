@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900,900i");
+body {
+  margin: 0px;
+  font-family: Roboto, '微軟正黑體';
+  font-size: 16px;
+  color: #000000;
+  line-height: 24px;
+}
+
+.header {
+  background: #000000;
+  color: #50ff44;
+  font-style: italic;
+  font-size: 36px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.container {
+  width: 610px;
+  margin: 28px auto;
+}
+
+.detail .name {
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 36px;
+  font-weight: bold;
+  background: #000000;
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.detail img {
+  margin-top: -8px;
+  float: left;
+  width: 292px;
+  border: 5px solid #000000;
+}
+
+.detail::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.detail .line {
+  padding-top: 16px;
+}
+
+.detail .line .attr {
+  font-weight: bold;
+  padding-left: 24px;
+  padding-right: 24px;
+  float: left;
+  width: 50px;
+}
+
+.detail .line ~ .line {
+  padding-top: 8px;
+}
+
+.detail .summary .attr {
+  font-weight: bold;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  display: inline-block;
+}
+
+.detail .summary .summary-text {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chapters {
+  font-weight: bold;
+}
+
+.chapters::before {
+  border: 4px solid #000000;
+  content: 'All Chapters';
+  display: block;
+  padding: 15px 24px;
+  background: #000000;
+  color: #ffffff;
+  width: 181px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.chapters .chapter {
+  line-height: 24px;
+  color: #000000;
+  padding: 15px 24px;
+  border: 4px solid #000000;
+}
+
+.chapters .chapter:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.chapters .chapter:hover.new::after {
+  color: black;
+}
+
+.chapters .chapter ~ .chapter {
+  border-top: none;
+  border-bottom: none;
+}
+
+.chapters .chapter.new::after {
+  content: 'NEW';
+  display: inline-block;
+  padding: 0px 12px;
+  background: #50ff44;
+}
+
+.chapters div:first-child {
+  border-bottom: none;
+}
+
+.chapters div:last-child:last-child {
+  border-bottom: 4px solid #000000;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.control .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.control .light-switch {
+  width: 100px;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.control .light-switch .control-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  border: 2px solid #000000;
+  margin: 0px 10px;
+}
+
+.control .light-switch .control-button::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: '';
+  border: 1px solid #000000;
+  background: #000000;
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  top: 10%;
+  left: 0px;
+}
+
+.control .fa-angle-right {
+  padding: 0px 20px;
+  line-height: inherit;
+}
+
+.control .fas {
+  line-height: inherit;
+}
+
+.dark {
+  background: #000000;
+  color: #ffffff !important;
+}
+
+.dark div ~ {
+  color: #ffffff;
+}
+
+.dark .header {
+  background: #50ff44;
+  color: #000000;
+}
+
+.dark .light-switch .control-button::before {
+  left: 50%;
+}
+
+.dark .control-button {
+  border-color: #ffffff !important;
+  background: #ffffff;
+}
+
+.page {
+  padding-top: 20px;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .left {
+  position: absolute;
+  width: 60%;
+  left: calc( -610px * 60 / 100 * 10 / 100);
+  height: calc(100% - 20px);
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .left:hover::before {
+  content: '<';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  width: 10%;
+  height: 100%;
+  background: #50ff44;
+  position: absolute;
+}
+
+.page .right {
+  position: absolute;
+  width: 60%;
+  right: calc(-610px * 60 / 100 * 10 / 100);
+  font-size: 60px;
+  height: calc(100% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .right::before {
+  content: '';
+  display: block;
+  margin-right: auto;
+}
+
+.page .right:hover::after {
+  content: '>';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  width: 10%;
+  height: 100%;
+  background: #50ff44;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.page img {
+  width: 100%;
+}
+
+.page-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: auto;
+  counter-reset: page;
+  padding-top: 20px;
+}
+
+.page-switch .img {
+  padding: 10px;
+  width: 80px;
+  height: 120px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+}
+
+.page-switch .img::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.page-switch .img::after {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  counter-increment: page;
+  content: counter(page);
+}
+
+.page-switch .img:hover {
+  background: black;
+}
+
+.page-switch .img:hover::before {
+  content: '';
+  display: block;
+  background: none;
+}
+
+.page-switch .img:target::before {
+  background: none;
+}
+
+.page-switch .img img {
+  width: 100%;
+}
+
+* {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
