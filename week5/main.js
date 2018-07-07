@@ -1,5 +1,8 @@
+//第一次進來
+if (!location.hash) location.hash = '#1';
+scrollTo(0, 0);
+$('.page img').attr('src', $(':target img').attr('src'));
 $(function() {
-  if (!location.hash) location.hash = '#1';
   $('.control-button').click(function() {
     $('body').toggleClass('dark');
   });
@@ -18,5 +21,15 @@ $(function() {
         ? parseInt(location.hash.substr(1)) + 1
         : location.hash.substr(1));
     $('.page img').attr('src', $(':target img').attr('src'));
+  });
+  window.addEventListener(
+    'hashchange',
+    () => {
+      scrollTo(0, $('.page img').offset()['top']);
+    },
+    false
+  );
+  $('.page-switch .img').click(function() {
+    location.hash = '#' + this.id;
   });
 });
