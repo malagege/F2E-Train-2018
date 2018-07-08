@@ -191,8 +191,19 @@ body {
     width: 60%;
     left: calc(
       -610px * 60 / 100 * 10 / 100
-    ); //踩雷注意!!!! left 跟right 百分比是對應 relative，不是上一層....
-    height: calc(100% - 20px);
+    ); //踩雷注意!!!! left 跟right 百分比是對應 containing block
+    height: auto;
+    top: 20px;
+    bottom: 0px;
+    //為什麼要-20px，為什麼不是抓containing block的content-box的高度呢
+    //由於position:absolute算法高度就會不太一樣...
+    //可能還會關係影響到left,right,top,bottom
+    //left + margin-left + border-left-width + padding-left + width + padding-right + border-right-width + margin-right + right = 包含块宽度
+    //所以padding跟margin也會算進去
+    //終於知道為什麼
+    //除了calc(100% - 20px);
+    //也可以用height:auto;top:20;bottom:0px;
+    //[CSS规范 > 10 视觉格式化模型详述 Visual Formatting Model Details - HaoyCn's Blog - SegmentFault 思否](https://segmentfault.com/a/1190000003820437#articleHeader9)
     font-size: 60px;
     display: flex;
     align-items: center;
@@ -235,6 +246,27 @@ body {
   }
   img {
     width: 100%;
+    display: block;
+    //大雷，竟然height會不一置(感覺div下面有padding-bottom)
+    //其實是img是inline的關係
+    //也可以用position:absolute;left:0px;right:0px;top:0px;bottom:0px;
+    //[div或img图片高度随宽度自适应 - CSDN博客](https://blog.csdn.net/zh_rey/article/details/69666232)
+    //最後有找到[<img> 外层 div 高度大于 <img> 的原因 - 简书](https://www.jianshu.com/p/0d402f13b1d1)
+    //引用裡面的文章
+    //     尝试了各种解决的办法，一一说下：
+
+    //     去掉 DOCTYPE 声明，这倒是好了，可这是 HTML5 的标准声明，这肯定不是正解。
+    //     给 img 设置 display:block; 样式
+    //     给 img 设置 vertical-align:bottom; 样式
+    //     给 img 设置 float:left; 样式
+    //     给 div 设置 line-height:0; 样式。因为 line-height 属性继承自其父元素，所以要在其父元素上设置这个值就可以了
+    //     给 div 设置 font-size:0; 样式
+    //     给 div 设置 height，值等同于图片，不过如果图片的高度不是固定的，就不太合适了
+
+    // 作者：Bencalie
+    // 链接：https://www.jianshu.com/p/0d402f13b1d1
+    // 來源：简书
+    // 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
   }
 }
 
