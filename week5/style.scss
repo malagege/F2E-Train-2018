@@ -56,6 +56,9 @@ body {
       width: 50px;
     }
     padding-top: 16px;
+    ::after {
+      clear: both;
+    }
   }
   .line ~ .line {
     padding-top: 8px;
