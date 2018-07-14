@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i");
+body {
+  font-family: Roboto;
+  color: #000000;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.sub {
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+input {
+  border: 2px solid #000000 !important;
+  border-radius: 8px !important;
+}
+
+input:focus {
+  border: 2px solid #0275d8 !important;
+}
+
+.form-group label {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.btn {
+  width: 100%;
+  border: 2px solid #bee1ff;
+  border-radius: 8px;
+  background: #bee1ff;
+  height: 52px;
+  font-size: 20px;
+  color: #ffffff !important;
+  line-height: 25px !important;
+}
+
+#container {
+  width: 456px;
+  margin: 0px auto;
+  border-top: 8px solid #0275d8;
+  position: relative;
+}
+
+.form-status ul {
+  padding-top: 41px;
+  padding-bottom: 41px;
+  display: block;
+  font-size: 0px;
+}
+
+.form-status ul li {
+  font-size: initial;
+  margin-right: 64px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  color: #bee1ff;
+}
+
+.form-status ul li:last-child {
+  margin-right: auto;
+}
+
+.form-status ul li:first-child::before {
+  content: none;
+}
+
+.form-status ul li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -65px;
+  height: 0px;
+  border: 2px solid #bee1ff;
+  margin: 0 auto;
+  bottom: auto;
+  width: 65px;
+}
+
+.form-status ul li .fa-dot-circle {
+  display: none;
+}
+
+.form-status ul li.ok::before {
+  border-color: #0275d8;
+}
+
+.form-status ul li.ok .fa-dot-circle {
+  display: inline-block;
+  color: #0275d8;
+}
+
+.form-status ul li.ok .fa-circle {
+  display: none;
+}
+
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5 {
+  position: fixed;
+  width: inherit;
+}
+
+label.error {
+  position: relative;
+  background: #f5a623;
+  border: 1px solid #f5a623;
+  color: white;
+  font-size: 14px !important;
+  padding: 6px 8px;
+  left: calc(100% + 10px) !important;
+  top: -40px;
+}
+
+label.error:after,
+label.error:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+label.error:after {
+  border-color: rgba(245, 166, 35, 0);
+  border-right-color: #f5a623;
+  border-width: 8px;
+  margin-top: -8px;
+}
+
+label.error:before {
+  border-color: rgba(245, 166, 35, 0);
+  border-right-color: #f5a623;
+  border-width: 9px;
+  margin-top: -9px;
+}
+/*# sourceMappingURL=style.css.map */
