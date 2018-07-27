@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i");
+body {
+  background: #1469ff;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto';
+}
+
+.into {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-rows: 100%;
+  grid-auto-columns: 100%;
+}
+
+.poa {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 999;
+  width: 313px;
+  height: 313px;
+}
+
+.t3 {
+  border-style: solid;
+  border-width: 0 182.5px 313px 182.5px;
+  border-color: transparent transparent #ff3c82 transparent;
+  position: absolute;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.t3.d180 {
+  -webkit-transform: rotate(180deg) translate(0px, -50px);
+          transform: rotate(180deg) translate(0px, -50px);
+}
+
+.circle {
+  background: #0027c8;
+  width: 534px;
+  height: 534px;
+  border-radius: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+}
+
+.rect {
+  background: black;
+  width: 420px;
+  height: 420px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.text {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  color: white;
+}
+
+.text h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.text h3 {
+  font-family: Roboto;
+  font-size: 24px;
+}
+/*# sourceMappingURL=style.css.map */
