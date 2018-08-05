@@ -1,0 +1,139 @@
+$header-title: #ff0093;
+$left-sidebar-rank-block-bg-color: #8000ff;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+* {
+  // border: 1px solid black;
+}
+
+body {
+  margin: 0px auto;
+  display: flex;
+  font-family: roboto;
+  font-size: 16px;
+  background: linear-gradient(#1d004b, #070011), black;
+  // 最後一層在最下面
+  //https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
+  max-width: 1024px;
+}
+
+.max-img {
+  width: 100%;
+}
+
+body > * {
+  width: 33%;
+  min-height: 100vh;
+}
+
+.left-sidebar {
+  h1 {
+    color: $header-title;
+    font-size: 48px;
+    font-style: italic;
+  }
+  .h2 {
+    font-size: 36px;
+    text-decoration: underline; //http://www.wibibi.com/info.php?tid=104
+    text-decoration-color: $left-sidebar-rank-block-bg-color;
+    color: white;
+  }
+  .rank-block {
+    background: $left-sidebar-rank-block-bg-color;
+    color: black;
+    display: inline-block;
+    padding: 4px 16px;
+  }
+  .text {
+    padding: 29px 22px;
+    margin-top: 42px;
+    margin-left: 42px;
+    border: 2px solid $header-title;
+    color: white;
+    span {
+      color: $header-title;
+      font-weight: 800;
+    }
+  }
+}
+
+.skill-group {
+  display: flex;
+}
+
+.skills {
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+  color: white;
+  .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center; //發現置中完後，延展功能會取消??
+  }
+  .skill-item {
+    //感覺可以用用看grid排版，用gap會比較方便
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.skill-item-img {
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  background: rgba($color: #ffffff, $alpha: 0.1);
+  .material-icons {
+    font-size: 3em;
+  }
+}
+
+.center-sidebar {
+  padding-top: 40px;
+  display: grid;
+  grid-auto-rows: min-content; //小小踩雷紀錄，不知道為什麼沒東西的.skill-group會撐開
+  .program {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+//body > *
+//.right-sidebar權重  class最大
+// 覺得應該一般排版使用html調整會比較好
+.right-sidebar {
+  min-height: 90vh;
+  margin-right: 3em;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  background: #6900d1;
+  //   align-self: center;
+  // 可以flex置中，不延展會取消
+  //[html - How to make a flex item not fill the height of the flex container? - Stack Overflow](https://stackoverflow.com/questions/33212892/how-to-make-a-flex-item-not-fill-the-height-of-the-flex-container)
+  //後來發現中間延展的話，位置會跑掉....，所以改成margin
+  .header {
+    background: $left-sidebar-rank-block-bg-color;
+    h3 {
+      font-size: 36px;
+      padding-bottom: 24px;
+    }
+  }
+  .header-img {
+    padding-top: 20px;
+    .material-icons {
+      font-size: 11em;
+    }
+  }
+  .option {
+    .material-icons {
+      font-size: 3em;
+    }
+  }
+  .button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 2px 52px;
+    border: 2px solid white;
+  }
+}

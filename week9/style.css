@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i");
+body {
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: roboto;
+  font-size: 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d004b), to(#070011)), black;
+  background: linear-gradient(#1d004b, #070011), black;
+  max-width: 1024px;
+}
+
+.max-img {
+  width: 100%;
+}
+
+body > * {
+  width: 33%;
+  min-height: 100vh;
+}
+
+.left-sidebar h1 {
+  color: #ff0093;
+  font-size: 48px;
+  font-style: italic;
+}
+
+.left-sidebar .h2 {
+  font-size: 36px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #8000ff;
+          text-decoration-color: #8000ff;
+  color: white;
+}
+
+.left-sidebar .rank-block {
+  background: #8000ff;
+  color: black;
+  display: inline-block;
+  padding: 4px 16px;
+}
+
+.left-sidebar .text {
+  padding: 29px 22px;
+  margin-top: 42px;
+  margin-left: 42px;
+  border: 2px solid #ff0093;
+  color: white;
+}
+
+.left-sidebar .text span {
+  color: #ff0093;
+  font-weight: 800;
+}
+
+.skill-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  text-align: center;
+  color: white;
+}
+
+.skills .meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills .skill-item {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.skill-item-img {
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-item-img .material-icons {
+  font-size: 3em;
+}
+
+.center-sidebar {
+  padding-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+
+.center-sidebar .program {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.right-sidebar {
+  min-height: 90vh;
+  margin-right: 3em;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  background: #6900d1;
+}
+
+.right-sidebar .header {
+  background: #8000ff;
+}
+
+.right-sidebar .header h3 {
+  font-size: 36px;
+  padding-bottom: 24px;
+}
+
+.right-sidebar .header-img {
+  padding-top: 20px;
+}
+
+.right-sidebar .header-img .material-icons {
+  font-size: 11em;
+}
+
+.right-sidebar .option .material-icons {
+  font-size: 3em;
+}
+
+.right-sidebar .button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 2px 52px;
+  border: 2px solid white;
+}
+/*# sourceMappingURL=style.css.map */
